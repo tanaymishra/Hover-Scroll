@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins";
+  background: #3c3c68;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  height: 80vh;
+  width: 50vw;
+  background: #6868b4;
+  overflow: hidden;
+  position: relative;
+}
+
+.slidersec {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.slidersec * {
+  margin: 0em 2em;
+}
+
+.main {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
+.cursor {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  top: 2em;
+  left: 2em;
+  border-radius: 40px;
+  border: 3px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.circle {
+  width: 2em;
+  height: 2em;
+  background: white;
+  border-radius: 30px;
+}
+
+.container:hover > .main {
+  -webkit-transform: translate(0, -80vh);
+          transform: translate(0, -80vh);
+}
+
+.container:hover > .cursor {
+  -webkit-animation: 1s ease-out anim;
+          animation: 1s ease-out anim;
+}
+
+.container:hover .circle {
+  -webkit-animation: ease-out 1s circle1;
+          animation: ease-out 1s circle1;
+}
+
+.slidersec:nth-child(2) {
+  background: #2d2d4e;
+  color: white;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    height: 3.5em;
+    -webkit-transform: translateY(3em);
+            transform: translateY(3em);
+    opacity: 1;
+  }
+  50% {
+    height: 9em;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6em);
+            transform: translateY(6em);
+  }
+}
+
+@keyframes anim {
+  0% {
+    height: 3.5em;
+    -webkit-transform: translateY(3em);
+            transform: translateY(3em);
+    opacity: 1;
+  }
+  50% {
+    height: 9em;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6em);
+            transform: translateY(6em);
+  }
+}
+
+@-webkit-keyframes circle1 {
+  0% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  50% {
+    -webkit-transform: translateY(2em);
+            transform: translateY(2em);
+  }
+  100% {
+  }
+}
+
+@keyframes circle1 {
+  0% {
+    -webkit-transform: translateY(1em);
+            transform: translateY(1em);
+  }
+  50% {
+    -webkit-transform: translateY(2em);
+            transform: translateY(2em);
+  }
+  100% {
+  }
+}
+/*# sourceMappingURL=style.css.map */
