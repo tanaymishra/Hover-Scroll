@@ -5,43 +5,55 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body{
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Poppins", sans-serif;
     background: rgb(60, 60, 104);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    padding: 2rem;
 }
-
+.title{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
 .container{
-    height: 80vh;
-    width: 50vw;
+    --h: 40vh;
+    height: var(--h);
+    width: 18rem;
     background: rgb(104, 104, 180);
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 }
 .slidersec{
-    height: 80vh;
+    height: var(--h);
     display: flex;
     justify-content: center;
-    align-self: center;
     flex-direction: column;
-    *{
-        margin: 0em 2em;
-    }
+    padding: 0 1.5rem;
+}
+.slidersec h2{
+    margin-bottom: 0.5rem;
+}
+.slidersec p{
+    font-size: 0.9rem;
+    line-height: 1.4;
 }
 .main{
     transition: transform 1s ease-in-out;
 }
-
 .cursor{
     position: absolute;
     width: 4em;
     height: 4em;
-    // background: black;
     top: 2em;
     left: 2em;
-    border-radius:40px;
+    border-radius: 40px;
     border: 3px solid white;
     display: flex;
     justify-content: center;
@@ -50,27 +62,22 @@ body{
 }
 .circle{
     width: 2em;
-    height:2em;
+    height: 2em;
     background: white;
     border-radius: 30px;
 }
-
-
-.container:hover{
-    >.main{
-    transform: translate(0,-80vh);}
-    >.cursor{
-        animation: 1s ease-out anim;
-    }
-    .circle{
-        animation: ease-out 1s circle1;
-    }
+.container:hover > .main{
+    transform: translateY(calc(var(--h) * -1));
+}
+.container:hover > .cursor{
+    animation: 1s ease-out anim;
+}
+.container:hover .circle{
+    animation: ease-out 1s circle1;
 }
 .slidersec:nth-child(2){
     background: rgb(45, 45, 78);
-    color: white;
 }
-
 @keyframes anim{
     0%{
         height: 3.5em;
@@ -85,7 +92,7 @@ body{
         opacity: 0;
         transform: translateY(6em);
     }
-} 
+}
 @keyframes circle1{
     0%{
         transform: translateY(1em);
@@ -94,6 +101,6 @@ body{
         transform: translateY(2em);
     }
     100%{
-
+        transform: translateY(0);
     }
 }
