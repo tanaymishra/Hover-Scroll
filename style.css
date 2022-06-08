@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   background: #3c3c68;
   display: -webkit-box;
   display: -ms-flexbox;
