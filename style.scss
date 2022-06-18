@@ -104,3 +104,16 @@ body{
         transform: translateY(0);
     }
 }
+
+.container.teal{
+    background: #2a9d8f;
+}
+.container.teal .slidersec:nth-child(2){
+    background: #1f7268;
+}
+.container.red{
+    background: #b4536b;
+}
+.container.red .slidersec:nth-child(2){
+    background: #7e3a4b;
+}
