@@ -130,3 +130,9 @@ body{
 .container.horizontal:hover > .main{
     transform: translateX(-50%);
 }
+
+@media (max-width: 600px){
+    .container{
+        width: 90vw;
+    }
+}
